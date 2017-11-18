@@ -3,7 +3,7 @@ function [Move,X1,X2,Y1,Y2] = BFS (sx,sy,dx,dy, Xcen, Ycen )
 %% Define visited matrix
 V = ones(8,8)*-1;
 
-%% Let source cell indices be g,h;
+%% Let source cell indices be g,h
 V(sx,sy) = 0 ;
 
 %% Let destination cell indices be dx,dy
