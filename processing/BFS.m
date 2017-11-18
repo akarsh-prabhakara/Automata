@@ -1,18 +1,18 @@
 function [Move,X1,X2,Y1,Y2] = BFS (sx,sy,dx,dy, Xcen, Ycen )
 
-%% Define visited matrix
+% Define visited matrix
 V = ones(8,8)*-1;
 
-%% Let source cell indices be g,h
+% Let source cell indices be g,h
 V(sx,sy) = 0 ;
 
-%% Let destination cell indices be dx,dy
+% Let destination cell indices be dx,dy
 
-%% To check if source and destination are valid
+% To check if source and destination are valid
 
 if((sx>=1)&&(sx<=8)&&(dx>=1)&&(dx<=8))
 
-%% BFS for changing the visited matrix
+% BFS for changing the visited matrix
 i=1;j=1;
 Vindex=0;
  while(V(dx,dy)==(-1))
@@ -79,9 +79,9 @@ Vindex=0;
 end
 end
 
-%% Printing the path for the chess coin (Reverse order)
-%% Let dv be the visited value at the destination
-%% Moves are defined clockwise from 1 to 8. Move = 0 indicates don't move
+% Printing the path for the chess coin (Reverse order)
+% Let dv be the visited value at the destination
+% Moves are defined clockwise from 1 to 8. Move = 0 indicates don't move
 dv = V(dx,dy);
 px = dx;
 py = dy;
