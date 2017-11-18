@@ -19,7 +19,7 @@ Vindex=0;
     for i=1:8
         for j=1:8
             if (V(i,j)==Vindex)
-                %% Mark Validmoves with Vindex + 1;
+                % Mark Validmoves with Vindex + 1;
                     if((i-2)>=1)
                         if((j-1)>=1)
                             if  V(i-2,j-1) == -1
