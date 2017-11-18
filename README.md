@@ -15,4 +15,9 @@ This is the code which is run on a computer with Bluetooth capability. The pipel
 open;
 ```
 
-This command will start running the entire pipeline. The pipeline will take a [static image] (arena.jpg) and do the processing. One can configure the pipeline to take feed from webcam too. 
+This command will start running the entire pipeline. The pipeline will take a [static image] (./arena.jpg) and do the processing. One can configure the pipeline to take feed from webcam too. 
+
+## Contributors
+
+Akarsh Prabhakara
+Narendra Shivaraman
