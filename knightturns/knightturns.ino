@@ -1,0 +1,425 @@
+const int m1_1 = 7;
+const int m1_2 = 8;
+const int m2_1 = 5;
+const int m2_2 = 3;
+int val,val1;
+const int swalk = 1300;
+const int lwalk = 2350;
+const int lturn = 2200;
+const int rturn = 2700;
+const int lpause = 10000;
+const int spause = 500;
+const int lthreshold = 50;
+const int rthreshold = 50;
+const int sthreshold = 50;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(m1_1,OUTPUT);
+  pinMode(m1_2,OUTPUT);
+  pinMode(m2_1,OUTPUT);
+  pinMode(m2_2,OUTPUT);
+  pinMode(13,OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(10,OUTPUT);
+}
+void loop()
+{
+  digitalWrite(13,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(12,LOW);
+  digitalWrite(11,LOW);
+  if (Serial.available()>0)
+  {
+    val = Serial.read();
+    Serial.println(val);
+    if(val == 1)
+    {
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,LOW);
+      delay(rturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      Serial.println("0");
+      delay(lpause);
+    }
+        if(val == 2)
+    {
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,LOW);
+      delay(rturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(lpause);
+      Serial.println("0");
+    }
+        if(val == 3)
+    {
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,LOW);
+      delay(rturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,LOW);
+      delay(rturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(lpause);
+      Serial.println("0");
+    }
+    if(val == 4)
+    {
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,HIGH);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,LOW);
+      delay(rturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(lpause);
+      Serial.println("0");
+    }
+    if(val == 5)
+    {
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,HIGH);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(lpause);
+      Serial.println("0");
+    }
+    if(val == 6)
+    {
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(lpause);
+      Serial.println("0");
+    }
+    if(val == 7)
+    {
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,LOW);
+      delay(rturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(lpause);
+      Serial.println("0");
+    }
+    if(val == 8)
+    {
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lwalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(lturn);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(spause);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(swalk);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      delay(lpause);
+      Serial.println("0");
+    }
+    if(val == 9)
+    {
+      Serial.println("0");
+      val1 = Serial.read();
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(val1 * lthreshold);
+      Serial.println("0");
+    }
+    if(val == 9)
+    {
+      Serial.println("0");
+      val1 = Serial.read();
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(val1 * lthreshold);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      Serial.println("0");
+      delay(spause);
+    }
+    if(val == 10)
+    {
+      Serial.println("0");
+      val1 = Serial.read();
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,LOW);
+      delay(val1 * rthreshold);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      Serial.println("0");
+      delay(spause);
+    }
+    if(val == 11)
+    {
+      Serial.println("0");
+      val1 = Serial.read();
+      digitalWrite(m1_1,LOW);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,LOW);
+      digitalWrite(m2_2,HIGH);
+      delay(val1 * sthreshold);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      Serial.println("0");
+      delay(spause);
+    }
+    if(val == 12)
+    {
+      Serial.println("0");
+      val1 = Serial.read();
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,LOW);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,LOW);
+      delay(val1 * sthreshold);
+      digitalWrite(m1_1,HIGH);
+      digitalWrite(m1_2,HIGH);
+      digitalWrite(m2_1,HIGH);
+      digitalWrite(m2_2,HIGH);
+      Serial.println("0");
+      delay(spause);
+    }
+  }
+}
