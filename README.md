@@ -19,5 +19,5 @@ This command will start running the entire pipeline. The pipeline will take a [s
 
 ### Contributors
 
-Akarsh Prabhakara  
+[Akarsh Prabhakara](mailto:akarsh.9996@gmail.com)
 Narendra Shivaraman  
